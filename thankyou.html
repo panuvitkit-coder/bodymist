@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ขอบคุณที่สั่งซื้อ | Body Scent</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page-specific styles (thank-you only) */
+    body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
+    main { flex: 1; display: flex; align-items: center; background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%); }
+    .thanks { padding-block: var(--space-6); }
+    .thanks .container { display: grid; gap: var(--space-3); justify-items: center; text-align: center; }
+    .thanks h1 { font-size: var(--fs-xl); line-height: 1.4; }
+    .thanks__mark { display: flex; gap: 0.9rem; margin-bottom: var(--space-1); }
+    .thanks .btn { margin-top: var(--space-2); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="thanks">
+      <div class="container">
+        <div class="thanks__mark" aria-hidden="true">
+          <span class="mood-dot mood-fresh"></span>
+          <span class="mood-dot mood-sweet"></span>
+          <span class="mood-dot mood-confident"></span>
+          <span class="mood-dot mood-romance"></span>
+        </div>
+        <h1>ขอบคุณที่สั่งซื้อ</h1>
+        <span class="rule"></span>
+        <p class="lead">เราได้รับคำสั่งซื้อของคุณแล้ว ขอบคุณที่เลือก Body Scent</p>
+        <a class="btn" href="index.html">กลับหน้าแรก</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div class="brand">Body Scent</div>
+        <p>ความหอมที่ตอบโจทย์ทุก Mood</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้าทั้งหมด</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>เลือกตาม Mood</h4>
+        <ul>
+          <li><a href="product.html?mood=fresh">Fresh</a></li>
+          <li><a href="product.html?mood=sweet">Sweet</a></li>
+          <li><a href="product.html?mood=confident">Confident</a></li>
+          <li><a href="product.html?mood=romance">Romance</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom" style="grid-column: 1 / -1;">© 2026 Body Scent สงวนลิขสิทธิ์</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

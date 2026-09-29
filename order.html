@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า | Body Scent</title>
+  <meta name="description" content="กรอกข้อมูลเพื่อยืนยันคำสั่งซื้อน้ำหอมฉีดตัวและโรลออน Body Scent">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page-specific styles (order only) */
+    .page-head { padding-block: clamp(3.5rem, 2rem + 5vw, 6rem); }
+    .page-head h1 { font-size: var(--fs-xl); line-height: 1.4; }
+
+    .form-wrap { max-width: 38rem; margin-inline: auto; }
+    .order-card {
+      padding: var(--space-4);
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .textarea { min-height: 6rem; resize: vertical; line-height: 1.7; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .form-foot { margin-top: var(--space-3); text-align: center; font-size: var(--fs-sm); }
+    .form-foot p { margin-inline: auto; }
+
+    @media (max-width: 600px) {
+      .order-card { padding: var(--space-3); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section--cream page-head">
+      <div class="container">
+        <div class="section-head text-center" style="margin-bottom: 0;">
+          <h1>สั่งซื้อสินค้า</h1>
+          <span class="rule"></span>
+          <p>กรอกข้อมูลด้านล่างเพื่อยืนยันคำสั่งซื้อ</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="form-wrap">
+          <form class="order-card stack" id="orderForm">
+
+            <div class="field">
+              <label for="customerName">ชื่อลูกค้า</label>
+              <input class="input" type="text" id="customerName" name="customerName" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="contact">เบอร์โทร / Line</label>
+              <input class="input" type="text" id="contact" name="contact" placeholder="เบอร์โทรหรือ Line ID" autocomplete="off" required>
+            </div>
+
+            <div class="field">
+              <label for="items">รายการสินค้า</label>
+              <textarea class="textarea" id="items" name="items" rows="3" required></textarea>
+            </div>
+
+            <div class="field">
+              <label for="total">จำนวนเงินรวม (บาท)</label>
+              <input class="input" type="text" id="total" name="total" inputmode="decimal" autocomplete="off" required>
+            </div>
+
+            <div class="field">
+              <label for="note">หมายเหตุ (ไม่บังคับ)</label>
+              <textarea class="textarea" id="note" name="note" rows="3"></textarea>
+            </div>
+
+            <button class="btn btn--solid btn--block" type="submit">ยืนยันสั่งซื้อ</button>
+          </form>
+
+          <div class="form-foot">
+            <p class="muted">ต้องการเลือกสินค้าเพิ่ม? <a class="link" href="product.html">ดูสินค้าทั้งหมด</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div class="brand">Body Scent</div>
+        <p>ความหอมที่ตอบโจทย์ทุก Mood</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้าทั้งหมด</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>เลือกตาม Mood</h4>
+        <ul>
+          <li><a href="product.html?mood=fresh">Fresh</a></li>
+          <li><a href="product.html?mood=sweet">Sweet</a></li>
+          <li><a href="product.html?mood=confident">Confident</a></li>
+          <li><a href="product.html?mood=romance">Romance</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom" style="grid-column: 1 / -1;">© 2026 Body Scent สงวนลิขสิทธิ์</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
